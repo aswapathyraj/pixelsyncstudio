@@ -446,6 +446,15 @@ select.field-input {
   }
 }
 
+/* ---------------- Mobile: keep the giant sign-off inside the viewport ---------------- */
+
+@media (max-width: 47.99rem) {
+  .footer-word {
+    font-size: 12.2vw;
+    letter-spacing: -0.055em;
+  }
+}
+
 /* ---------------- Reduced motion ---------------- */
 
 @media (prefers-reduced-motion: reduce) {

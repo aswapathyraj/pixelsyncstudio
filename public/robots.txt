@@ -1,0 +1,6 @@
+# PixelSync Studio
+# TODO: Replace the placeholder domain with the production domain when it is live.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.pixelsyncstudio.example/sitemap.xml

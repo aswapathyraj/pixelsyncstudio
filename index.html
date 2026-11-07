@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // Applied before first paint to avoid a theme flash. Dark is the default brand experience.
+      try {
+        var stored = window.localStorage.getItem('pixelsync-theme')
+        document.documentElement.dataset.theme = stored === 'light' ? 'light' : 'dark'
+      } catch (_) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PixelSync Studio — Web Design, UI/UX &amp; Full-Stack Development Studio</title>
+    <meta
+      name="description"
+      content="PixelSync Studio designs and builds modern websites, web applications, and intuitive digital experiences using thoughtful design and modern technology."
+    />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <!-- TODO: Replace the placeholder domain below with the production domain when it is live. -->
+    <link rel="canonical" href="https://www.pixelsyncstudio.example/" />
+    <meta name="theme-color" content="#0B0D0F" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="PixelSync Studio" />
+    <meta property="og:title" content="PixelSync Studio — Web Design, UI/UX &amp; Full-Stack Development Studio" />
+    <meta
+      property="og:description"
+      content="PixelSync Studio designs and builds modern websites, web applications, and intuitive digital experiences using thoughtful design and modern technology."
+    />
+    <meta property="og:url" content="https://www.pixelsyncstudio.example/" />
+    <meta property="og:image" content="https://www.pixelsyncstudio.example/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="PixelSync Studio — We design &amp; build digital products." />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PixelSync Studio — Web Design, UI/UX &amp; Full-Stack Development Studio" />
+    <meta
+      name="twitter:description"
+      content="PixelSync Studio designs and builds modern websites, web applications, and intuitive digital experiences using thoughtful design and modern technology."
+    />
+    <meta name="twitter:image" content="https://www.pixelsyncstudio.example/og-image.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Structured data: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "PixelSync Studio",
+      "description": "PixelSync Studio designs and builds modern websites, web applications, and intuitive digital experiences using thoughtful design and modern technology.",
+      "slogan": "We design & build digital products.",
+      "areaServed": "Worldwide",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
+      },
+      "sameAs": ["https://www.instagram.com/pixelsyncweb/"],
+      "knowsAbout": [
+        "Web Design",
+        "Web Application Development",
+        "UI/UX Design",
+        "Full-Stack Development"
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

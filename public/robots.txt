@@ -1,6 +1,5 @@
-# PixelSync Studio
-# TODO: Replace the placeholder domain with the production domain when it is live.
+# PixelSync Studio — https://pixelsyncstudio.vercel.app
 User-agent: *
 Allow: /
 
-Sitemap: https://www.pixelsyncstudio.example/sitemap.xml
+Sitemap: https://pixelsyncstudio.vercel.app/sitemap.xml

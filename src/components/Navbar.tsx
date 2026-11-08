@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { motion, useScroll, useSpring } from 'framer-motion'
+import { motion, useReducedMotion, useScroll, useSpring } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import Logo from './Logo'
 import Button from './Button'
@@ -13,8 +13,11 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const toggleRef = useRef<HTMLButtonElement>(null)
 
+  const reduceMotion = useReducedMotion()
   const { scrollYProgress } = useScroll()
-  const progress = useSpring(scrollYProgress, { stiffness: 140, damping: 24, mass: 0.4 })
+  const springProgress = useSpring(scrollYProgress, { stiffness: 140, damping: 24, mass: 0.4 })
+  // Reduced motion: the hairline tracks scroll directly instead of trailing it.
+  const progress = reduceMotion ? scrollYProgress : springProgress
 
   useEffect(() => {
     const onScroll = () => {

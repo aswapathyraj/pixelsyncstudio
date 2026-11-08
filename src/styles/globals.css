@@ -40,7 +40,10 @@
   --on-accent: #06231a;
   --text: #e9ecef;
   --text-dim: #a8b0b9;
-  --text-faint: #6b737b;
+  /* Faint text lifted from #6B737B (3.74:1 on #14171A — fails WCAG AA) to
+     #838B94 (4.70:1 on #1C2126, 5.21:1 on #14171A). Still a clear step below
+     --text-dim, but now readable as body-size text. */
+  --text-faint: #838b94;
   --line: #1c2126;
   --line-strong: #272f38;
   --line-grid: rgba(233, 236, 239, 0.042);
@@ -59,19 +62,23 @@
   --bg-secondary: #eceff3;
   --surface: #ffffff;
   --surface-2: #eff1f5;
-  --accent: #00875a;
+  /* Brand emerald, darkened from #00875A to #007A50: same hue, but #00875A
+     measured 4.21:1 as small text on #F5F6F8 (WCAG AA needs 4.5:1).
+     #007A50 passes at 4.98:1 on #F5F6F8 and 4.67:1 on #ECEFF3. */
+  --accent: #007a50;
   --accent-hover: #00704a;
-  --accent-soft: rgba(0, 135, 90, 0.09);
-  --accent-softer: rgba(0, 135, 90, 0.05);
+  --accent-soft: rgba(0, 122, 80, 0.09);
+  --accent-softer: rgba(0, 122, 80, 0.05);
   --on-accent: #ffffff;
   --text: #14171a;
   --text-dim: #49545f;
-  --text-faint: #7a828c;
+  /* Faint text darkened from #7A828C (3.60:1 on #F5F6F8 — fails AA) */
+  --text-faint: #626a74;
   --line: #e3e5ea;
   --line-strong: #d4d7de;
   --line-grid: rgba(20, 23, 26, 0.052);
-  --glow: rgba(0, 135, 90, 0.14);
-  --glow-strong: rgba(0, 135, 90, 0.26);
+  --glow: rgba(0, 122, 80, 0.14);
+  --glow-strong: rgba(0, 122, 80, 0.26);
   --shadow-card: 0 24px 60px -34px rgba(20, 23, 26, 0.35);
   --danger: #c62f22;
   color-scheme: light;
@@ -452,6 +459,16 @@ select.field-input {
   .footer-word {
     font-size: 12.2vw;
     letter-spacing: -0.055em;
+  }
+}
+
+/* ---------------- Inputs at 16px so iOS Safari never auto-zooms on focus ----------------
+   Scoped to narrow viewports and touch devices (iPads in landscape are wide
+   but still zoom); a fine-pointer desktop at ≥1024px keeps the original size. */
+
+@media (max-width: 63.99rem), (pointer: coarse) {
+  .field-input {
+    font-size: 1rem;
   }
 }
 

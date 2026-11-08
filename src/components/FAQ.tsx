@@ -30,7 +30,7 @@ export default function FAQ() {
             href="https://www.instagram.com/pixelsyncweb/"
             target="_blank"
             rel="noreferrer noopener"
-            className="group inline-flex w-fit items-center gap-2 text-sm font-semibold text-accent"
+            className="group inline-flex min-h-11 w-fit items-center gap-2 text-sm font-semibold text-accent lg:min-h-0"
           >
             <InstagramIcon size={16} aria-hidden="true" />
             <span className="underline decoration-accent/40 underline-offset-4 transition-colors group-hover:decoration-accent">

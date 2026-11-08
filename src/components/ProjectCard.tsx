@@ -55,7 +55,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               href={project.liveUrl}
               target="_blank"
               rel="noreferrer noopener"
-              className="inline-flex items-center gap-1.5 text-accent transition-opacity hover:opacity-80"
+              className="inline-flex min-h-11 items-center gap-1.5 text-accent transition-opacity hover:opacity-80 lg:min-h-0"
             >
               Live site
               <ArrowUpRight size={15} aria-hidden="true" />
@@ -66,7 +66,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               href={project.repoUrl}
               target="_blank"
               rel="noreferrer noopener"
-              className="inline-flex items-center gap-1.5 text-dim transition-colors hover:text-ink"
+              className="inline-flex min-h-11 items-center gap-1.5 text-dim transition-colors hover:text-ink lg:min-h-0"
             >
               <GithubIcon size={15} aria-hidden="true" />
               Source

@@ -131,7 +131,7 @@ function CopyEmailButton() {
     <button
       type="button"
       onClick={copy}
-      className="inline-flex items-center gap-1.5 rounded-lg border border-linestrong px-3 py-2 text-[0.8rem] font-semibold text-dim transition-colors duration-300 hover:border-accent hover:text-accent"
+      className="inline-flex min-h-11 items-center gap-1.5 rounded-lg border border-linestrong px-3 py-2 text-[0.8rem] font-semibold text-dim transition-colors duration-300 hover:border-accent hover:text-accent lg:min-h-0"
       aria-label={copied ? 'Email address copied' : `Copy email address ${CONTACT_EMAIL}`}
     >
       {copied ? (
@@ -251,7 +251,7 @@ export default function Contact() {
           <div className="flex flex-col gap-3 text-sm text-faint">
             <a
               href={`mailto:${CONTACT_EMAIL}`}
-              className="group inline-flex w-fit items-center gap-2 font-medium text-dim transition-colors duration-300 hover:text-accent"
+              className="group inline-flex min-h-11 w-fit items-center gap-2 font-medium text-dim transition-colors duration-300 hover:text-accent lg:min-h-0"
             >
               <Mail size={14} aria-hidden="true" className="text-accent" />
               <span className="underline decoration-linestrong underline-offset-4 transition-colors duration-300 group-hover:decoration-accent">

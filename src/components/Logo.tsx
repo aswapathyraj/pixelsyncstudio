@@ -44,7 +44,7 @@ export default function Logo({ compact = false }: { compact?: boolean }) {
   return (
     <a
       href="#home"
-      className="group inline-flex items-center gap-3 rounded-lg"
+      className="group inline-flex min-h-11 items-center gap-3 rounded-lg"
       aria-label="PixelSync Studio — back to top"
     >
       <PixelMark

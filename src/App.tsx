@@ -11,7 +11,7 @@ import Footer from './components/Footer'
 
 export default function App() {
   return (
-    <div className="grain min-h-screen bg-background font-sans text-ink">
+    <div className="grain min-h-dvh bg-background font-sans text-ink">
       <a className="skip-link" href="#main">
         Skip to main content
       </a>

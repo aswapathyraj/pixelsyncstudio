@@ -148,7 +148,7 @@ export default function About() {
             <span aria-hidden="true" className="hidden h-1 w-1 rounded-full bg-faint sm:inline-block" />
             <a
               href="#contact"
-              className="group font-semibold text-dim underline decoration-linestrong decoration-2 underline-offset-4 transition-colors duration-300 hover:text-accent hover:decoration-accent"
+              className="group inline-flex min-h-11 items-center font-semibold text-dim underline decoration-linestrong decoration-2 underline-offset-4 transition-colors duration-300 hover:text-accent hover:decoration-accent lg:min-h-0"
             >
               Work with us
             </a>

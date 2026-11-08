@@ -28,7 +28,10 @@ export default function Footer() {
               alt="PixelSync Studio"
               width={779}
               height={656}
+              loading="lazy"
+              decoding="async"
               className="h-14 w-auto lg:h-16"
+              style={{ aspectRatio: '779 / 656' }}
               draggable={false}
             />
           </a>
@@ -48,10 +51,12 @@ export default function Footer() {
             <h3 className="mb-3 font-mono text-[0.66rem] font-semibold uppercase tracking-[0.3em] text-faint lg:mb-4">
               Navigate
             </h3>
-            <ul className="flex flex-col gap-2.5 text-[0.92rem]">
+            {/* Mobile: 44px rows replace the 10px gap so every link is a full
+                touch target; desktop (lg+) keeps the original compact rhythm. */}
+            <ul className="flex flex-col text-[0.92rem] lg:gap-2.5">
               {navLinks.map((link) => (
                 <li key={link.id}>
-                  <a href={link.href} className="text-dim transition-colors duration-300 hover:text-accent">
+                  <a href={link.href} className="flex min-h-11 items-center text-dim transition-colors duration-300 hover:text-accent lg:min-h-0">
                     {link.label}
                   </a>
                 </li>
@@ -64,10 +69,10 @@ export default function Footer() {
             <h3 className="mb-3 font-mono text-[0.66rem] font-semibold uppercase tracking-[0.3em] text-faint lg:mb-4">
               Services
             </h3>
-            <ul className="flex flex-col gap-2.5 text-[0.92rem]">
+            <ul className="flex flex-col text-[0.92rem] lg:gap-2.5">
               {services.map((service) => (
                 <li key={service.id}>
-                  <a href="#services" className="text-dim transition-colors duration-300 hover:text-accent">
+                  <a href="#services" className="flex min-h-11 items-center text-dim transition-colors duration-300 hover:text-accent lg:min-h-0">
                     {service.title}
                   </a>
                 </li>
@@ -125,7 +130,7 @@ export default function Footer() {
           <p className="hidden sm:block">Designed &amp; engineered in Kerala, India.</p>
           <a
             href="#home"
-            className="group inline-flex items-center gap-2 font-semibold text-dim transition-colors duration-300 hover:text-accent"
+            className="group inline-flex min-h-11 items-center gap-2 font-semibold text-dim transition-colors duration-300 hover:text-accent lg:min-h-0"
             aria-label="Back to top"
           >
             Back to top

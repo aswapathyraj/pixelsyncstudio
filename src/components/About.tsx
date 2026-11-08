@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowLeftRight, Check, MapPin } from 'lucide-react'
+import Creators from './Creators'
 
 const EASE = [0.22, 1, 0.36, 1] as const
 
@@ -166,6 +167,9 @@ export default function About() {
           <DesignTechArtwork />
         </motion.div>
       </div>
+
+      {/* The creators — the two people behind PixelSync Studio */}
+      <Creators />
     </section>
   )
 }

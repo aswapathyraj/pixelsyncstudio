@@ -4,13 +4,14 @@ import { ArrowUpRight } from 'lucide-react'
 const EASE = [0.22, 1, 0.36, 1] as const
 
 const ASWAPATHY_STACK = ['React', 'JavaScript', 'Node.js', 'Express.js', 'SQL · SQLite', 'Tailwind CSS', 'JWT']
+const SHARAT_STACK = ['Python', 'Django', 'Next.js', 'JavaScript', 'React', 'MySQL', 'SQLite']
 
 /**
  * "The creators" — the two people behind PixelSync Studio.
- * Aswapathy's details come straight from his portfolio
- * (portfolio-v2-weld-five.vercel.app, JSON-LD + visible copy).
- * Sharat's portfolio is still being built, so his card carries an
- * honest "in progress" badge instead of a fabricated link.
+ * Both portfolios were verified live at the time this was written, and every
+ * detail below (roles, taglines, stacks) comes straight from their public
+ * sites rather than invention.
+ * Aswapathy — portfolio-v2-weld-five.vercel.app · Sharat — sharat-s-unnithan.vercel.app
  */
 export default function Creators() {
   const reduceMotion = useReducedMotion()
@@ -99,7 +100,7 @@ export default function Creators() {
             </div>
           </motion.article>
 
-          {/* Sharat S Unnithan — Creative Technologist (portfolio in progress) */}
+          {/* Sharat S Unnithan — Creative Technologist */}
           <motion.article
             {...reveal(0.12)}
             className="card flex h-full flex-col gap-6 p-6 sm:p-7"
@@ -108,7 +109,7 @@ export default function Creators() {
             <div className="flex items-center gap-4">
               <span
                 aria-hidden="true"
-                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-linestrong bg-surface2 font-display text-base font-semibold tracking-[0.08em] text-dim"
+                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-accent/30 bg-accentsoft font-display text-base font-semibold tracking-[0.08em] text-accent"
               >
                 SU
               </span>
@@ -124,20 +125,43 @@ export default function Creators() {
             </div>
 
             <p className="text-[0.98rem] leading-relaxed text-dim">
-              Co-founder shaping PixelSync Studio — design, technology, and everything
-              in between them.
+              Engineering practical software that solves real problems —{' '}
+              <span className="text-ink">robust Python &amp; Django backends</span>,
+              predictive algorithms, and resilient database architectures.
             </p>
 
-            <p className="text-[0.9rem] leading-relaxed text-faint">
-              Sharat&apos;s portfolio is currently under progression. It will be linked
-              here the moment it launches.
-            </p>
+            <div className="flex flex-col gap-2">
+              <span className="font-mono text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-faint">
+                Stack
+              </span>
+              <ul className="flex flex-wrap gap-1.5">
+                {SHARAT_STACK.map((tech) => (
+                  <li
+                    key={tech}
+                    className="rounded-full border border-line bg-abyss/40 px-2.5 py-1 text-[0.7rem] font-medium text-dim"
+                  >
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             <div className="mt-auto border-t border-line pt-4">
-              <span className="inline-flex min-h-11 items-center gap-2.5 rounded-full border border-dashed border-linestrong px-4 py-2 font-mono text-[0.66rem] font-semibold uppercase tracking-[0.22em] text-dim lg:min-h-9">
-                <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-accent" />
-                Portfolio in progress
-              </span>
+              <a
+                href="https://sharat-s-unnithan.vercel.app/"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="group inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-accent lg:min-h-0"
+              >
+                <span className="underline decoration-accent/40 underline-offset-4 transition-colors duration-300 group-hover:decoration-accent">
+                  View portfolio
+                </span>
+                <ArrowUpRight
+                  size={16}
+                  aria-hidden="true"
+                  className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                />
+              </a>
             </div>
           </motion.article>
         </div>
